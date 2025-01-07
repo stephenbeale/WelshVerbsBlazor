@@ -4,7 +4,7 @@ namespace WelshVerbsBlazor.Pages
 	{
 		public async Task GetRegister()
 		{
-
+			//
 		}
 	}
 }
