@@ -3,21 +3,106 @@
 <PageTitle>Welsh Verbs</PageTitle>
 
 <h1>Verb Tables</h1>
+<br />
+<h2>Verb: Siarad</h2>
+<br />
 
 <p>See below for the verb table for your chosen verb</p>
 
-<h2>Register</h2>
-<p>Formal or Informal</p>
-<p>Written or Spoken</p>
+<h2>Options</h2>
 
-<h2>Verb Table</h2>
-<table class="table table-striped">
-    <th>Subject Pronoun (English)</th>
-    <th>Subject Pronoun (Welsh)</th>
-    <th>Conjugated Verb</th>
+<form>
+    <div class="row mb-3">
+        <div class="col-md-1">
+            <label for="verbTense" class="form-label">Verb Tense:</label>
+            <select class="form-select" id="verbTense" name="verbTense">
+                <option value="present">Present</option>
+                <option value="presentPerfect">Present Perfect</option>
+                <option value="pastSimple">Past Simple</option>
+                <option value="pastContinuous">Past Continuous</option>
+                <option value="pastPerfect">Past Perfect</option>
+                <option value="imperfect">Imperfect</option>
+                <option value="futureSimple">Future Simple</option>
+                <option value="futureContinuous">Future Continuous</option>
+                <option value="presentSubjunctive">Present Subjunctive</option>
+                <option value="imperfectSubjunctive">Imperfect Subjunctive</option>
+            </select>
+        </div>
+        <div class="col-md-1">
+            <label class="form-label">Region:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="region" id="north" value="north" checked>
+                <label class="form-check-label" for="north">North Wales</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="region" id="south" value="south">
+                <label class="form-check-label" for="south">South Wales</label>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <label class="form-label">Formality:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="formality" id="formal" value="formal" checked>
+                <label class="form-check-label" for="formal">Formal/Written</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="formality" id="informal" value="informal">
+                <label class="form-check-label" for="informal">Informal/Spoken</label>
+            </div>
+        </div>        
+    </div>
+</form>
+
+<br />
+
+<h2>Verb Table: Siarad</h2>
+
+<div class="card rounded-3 d-inline-block p-0">
+    <table class="table table-bordered table-striped m-0 w-auto" style="table-layout: auto">
+    <thead>
+      <tr>
+        <th style="white-space: nowrap">Subject Pronoun<br/>(English)</th>
+        <th style="white-space: nowrap">Subject Pronoun<br/>(Welsh)</th>
+        <th style="min-width: 200px">Conjugated Verb</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>        
+        <td>I</td>
+        <td>Fi/I</td>
+        <td>Dw i'n siarad</td>
+      </tr>
     <tr>
-    <td>I</td>
-    <td>Dwi'n</td>
-    <td>siarad</td>
+        <td>You <br />(informal/singular)</td>
+        <td>Ti</td>
+        <td>Rwyt ti'n siarad</td>
     </tr>
+    <tr>
+        <td>He/It</td>
+        <td>E/Fe</td>
+        <td>Mae e'n siarad</td>
+    </tr>
+    <tr>
+        <td>She/It</td>
+        <td>Hi</td>
+        <td>Mae hi'n siarad</td>
+    </tr>    
+    <tr>
+        <td>We</td>
+        <td>Ni</td>
+        <td>Rydyn ni'n siarad</td>
+    </tr>
+    <tr>
+                <td>You <br />(formal/plural)</td>
+        <td>Chi</td>
+        <td>Rydych chi'n siarad</td>
+    </tr>
+    <tr>
+        <td>They</td>
+        <td>Nhw</td>
+        <td>Maen nhw'n siarad</td>
+    </tr>
+    </tbody>
 </table>
+</div>
+

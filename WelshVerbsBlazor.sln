@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelshVerbsBlazor", "WelshVerbsBlazor.csproj", "{4971544C-9960-4E55-A494-9AABBE35B2CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WelshVerbsBlazor", "WelshVerbsBlazor.csproj", "{4971544C-9960-4E55-A494-9AABBE35B2CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VerbsAPI", "..\..\proj\VerbsAPI\VerbsAPI.csproj", "{769A11AB-4012-4802-8B71-9821A10CD796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerbsAPIFastEndpoints", "..\..\proj\VerbsAPIFastEndpoints\VerbsAPIFastEndpoints.csproj", "{D78021F4-ADFD-4A4F-9AB3-EE0A81DB9850}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4971544C-9960-4E55-A494-9AABBE35B2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4971544C-9960-4E55-A494-9AABBE35B2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4971544C-9960-4E55-A494-9AABBE35B2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769A11AB-4012-4802-8B71-9821A10CD796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769A11AB-4012-4802-8B71-9821A10CD796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769A11AB-4012-4802-8B71-9821A10CD796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769A11AB-4012-4802-8B71-9821A10CD796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78021F4-ADFD-4A4F-9AB3-EE0A81DB9850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78021F4-ADFD-4A4F-9AB3-EE0A81DB9850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78021F4-ADFD-4A4F-9AB3-EE0A81DB9850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78021F4-ADFD-4A4F-9AB3-EE0A81DB9850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
