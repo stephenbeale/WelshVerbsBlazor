@@ -1,1 +1,1 @@
-﻿docker build -t welsh-verbs-blazor .; docker run --welsh-verbs welsh-verbs-blazor;
+﻿docker build -t welsh-verbs-blazor .; docker run --welsh-verbs welsh-verbs-blazor; docker start --welsh-verbs
