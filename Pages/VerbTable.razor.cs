@@ -6,7 +6,7 @@ using WelshVerbsBlazor.Models;
 
 namespace WelshVerbsBlazor.Pages
 {
-    public class VerbTable
+    public partial class VerbTable : ComponentBase
     {
         #region MyRegion
         [Inject]
@@ -30,7 +30,8 @@ namespace WelshVerbsBlazor.Pages
         private bool ShowPageError;
 
         private List<Verb>? verbList { get; set; } = new();
-        private Verb? currentVerb { get; set; }
+        [Parameter]
+        public Verb? Verb { get; set; }
         #endregion
 
         #region
