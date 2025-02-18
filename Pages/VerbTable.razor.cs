@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Reflection.Metadata;
 using WelshVerbsBlazor.Models;
 
@@ -9,12 +10,6 @@ namespace WelshVerbsBlazor.Pages
     public partial class VerbTable : ComponentBase
     {
         #region MyRegion
-        [Inject]
-        protected IStringLocalizer _localiser { get; set; } = default!;
-
-        [Inject]
-        private IHttpClientFactory _httpClientFactory { get; set; } = default!;
-
         [Inject]
         public HttpClient httpClient { get; set; }
 
@@ -30,8 +25,10 @@ namespace WelshVerbsBlazor.Pages
         private bool ShowPageError;
 
         private List<Verb>? verbList { get; set; } = new();
+        private List<string>? myListy { get; set; } = new();
+
         [Parameter]
-        public Verb? Verb { get; set; }
+        public string? Verb { get; set; }
         #endregion
 
         #region
@@ -39,6 +36,24 @@ namespace WelshVerbsBlazor.Pages
 
         #endregion
 
+        private async Task GetVerb()
+        {
+            try
+            {
+                var response = await httpClient.GetAsync("api/verbs/");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    await response.Content.ReadAsStringAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                LoadingErrorMessage = $"An error occurred: {ex.Message}";
+                ShowPageError = true;
+                return ;
+            }
+        }
 
         public async Task<string> GetRegister()
         {
