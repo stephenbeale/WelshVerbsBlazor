@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <Configurations>Debug;Release;Docker</Configurations>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerfileContext>.</DockerfileContext>
     <UserSecretsId>706fd5ba-1ca5-492f-b60f-05ebea2da174</UserSecretsId>
   </PropertyGroup>
 

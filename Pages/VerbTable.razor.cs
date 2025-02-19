@@ -28,7 +28,7 @@ namespace WelshVerbsBlazor.Pages
         private List<string>? myListy { get; set; } = new();
 
         [Parameter]
-        public string? Verb { get; set; }
+        public int? VerbId { get; set; }
         #endregion
 
         #region
@@ -36,11 +36,11 @@ namespace WelshVerbsBlazor.Pages
 
         #endregion
 
-        private async Task GetVerb()
+        private async Task GetVerb(int? id)
         {
             try
             {
-                var response = await httpClient.GetAsync("api/verbs/");
+                var response = await httpClient.GetAsync($"/verb/{VerbId}");
 
                 if (response.IsSuccessStatusCode)
                 {

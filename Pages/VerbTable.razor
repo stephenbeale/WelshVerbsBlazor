@@ -15,41 +15,38 @@
                 <tr>
                     <td>I</td>
                     <td>Fi/I</td>
-                @foreach (var something in myListy)
-                {
-                    <td>Dw i'n @Verb</td>
-                }
+                    <td>Dw i'n @GetVerb(VerbId)</td>
                 </tr>
             
             <tr>
                 <td>You <br />(informal/singular)</td>
                 <td>Ti</td>
-                <td>Rwyt ti'n @Verb</td>
+                <td>Rwyt ti'n @GetVerb(VerbId)</td>
             </tr>
             <tr>
                 <td>He/It</td>
                 <td>E/Fe</td>
-                <td>Mae e'n @Verb</td>
+                <td>Mae e'n @GetVerb(VerbId)</td>
             </tr>
             <tr>
                 <td>She/It</td>
                 <td>Hi</td>
-                <td>Mae hi'n @Verb</td>
+                <td>Mae hi'n @GetVerb(VerbId)</td>
             </tr>
             <tr>
                 <td>We</td>
                 <td>Ni</td>
-                <td>Rydyn ni'n @Verb</td>
+                <td>Rydyn ni'n @GetVerb(VerbId)</td>
             </tr>
             <tr>
                 <td>You <br />(formal/plural)</td>
                 <td>Chi</td>
-                <td>Rydych chi'n @Verb</td>
+                <td>Rydych chi'n @GetVerb(VerbId)</td>
             </tr>
             <tr>
                 <td>They</td>
                 <td>Nhw</td>
-                <td>Maen nhw'n @Verb</td>
+                <td>Maen nhw'n @GetVerb(VerbId)</td>
             </tr>
         </tbody>
     </table>
