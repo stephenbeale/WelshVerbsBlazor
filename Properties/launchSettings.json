@@ -8,7 +8,8 @@
       },
       "dotnetRunMessages": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
-      "applicationUrl": "http://localhost:5215"
+      "applicationUrl": "http://localhost:5215",
+      "hotReloadEnabled": true
     },
     "https": {
       "commandName": "Project",

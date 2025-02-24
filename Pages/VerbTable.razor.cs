@@ -44,9 +44,15 @@ namespace WelshVerbsBlazor.Pages
 
                 if (response.IsSuccessStatusCode)
                 {
-                    await response.Content.ReadAsStringAsync();
+                    string Verb = await response.Content.ReadAsStringAsync();
                 }
-            }
+				else
+				{
+					LoadingErrorMessage = $"Error: {response.StatusCode}";
+					ShowPageError = true;
+					return;
+				}
+			}
             catch(Exception ex)
             {
                 LoadingErrorMessage = $"An error occurred: {ex.Message}";
