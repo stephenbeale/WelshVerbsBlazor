@@ -1,0 +1,7 @@
+﻿# Start LocalDB instance called VerbTables
+sqllocaldb start VerbTables; 
+sqllocaldb info VerbTables; 
+
+# Seed data into database
+
+

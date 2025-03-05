@@ -1,0 +1,66 @@
+﻿-- Create a temporary table to hold the new verbs
+CREATE TABLE #TempVerbs (Verb NVARCHAR(100));
+
+-- Insert the new verbs into the temporary table
+INSERT INTO #TempVerbs (Verb)
+VALUES 
+	(N'bod'), 
+	(N'cael'), 
+	(N'gwneud'), 
+	(N'mynd'), 
+	(N'gweld'),
+	(N'gwybod'), 
+	(N'hoffi'), 
+	(N'eisiau'), 
+	(N'gweithio'), 
+	(N'dod'),
+	(N'siarad'), 
+	(N'bwyta'), 
+	(N'yfed'), 
+	(N'cysgu'), 
+	(N'gadael'),
+	(N'aros'), 
+	(N'dychwelyd'), 
+	(N'rhoi'), 
+	(N'cymryd'), 
+	(N'anfon'),
+	(N'darganfod'), 
+	(N'dysgu'), 
+	(N'meddwl'), 
+	(N'credu'), 
+	(N'deall'),
+	(N'cofio'), 
+	(N'defnyddio'), 
+	(N'angen'), 
+	(N'gallu'), 
+	(N'gwenu'),
+	(N'edrych'), 
+	(N'gwrando'), 
+	(N'anghofio'), 
+	(N'helpu'), 
+	(N'coginio'),
+	(N'caru'), 
+	(N'gobeithio'), 
+	(N'ofni'), 
+	(N'cerdded'), 
+	(N'gyrru'),
+	(N'chwerthin'), 
+	(N'crio'), 
+	(N'rhedeg'), 
+	(N'chwarae'), 
+	(N'canu'),
+	(N'dawnsio'), 
+	(N'nofio'), 
+	(N'darllen'), 
+	(N'ysgrifennu'), 
+	(N'teimlo');
+
+-- Insert only the verbs that don't already exist in the main table
+INSERT INTO [Verbs].[dbo].[Verbs] (Verb)
+SELECT t.Verb
+FROM #TempVerbs t
+LEFT JOIN [Verbs].[dbo].[Verbs] v ON t.Verb = v.Verb
+WHERE v.Verb IS NULL;
+
+-- Clean up: drop the temporary table
+DROP TABLE #TempVerbs;
