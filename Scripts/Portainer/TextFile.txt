@@ -1,0 +1,19 @@
+﻿Scripts from Simon via Teams chat on 07/03/2025
+
+
+version: "2.1"
+services:
+
+  wattfox-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: wattfox-db-dev
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD={CONTAINERS_PASSWORD}
+      - MSSQL_PID=Express
+    ports:
+      - 1433:1433
+    restart: unless-stopped
+
+Server=host.docker.internal;Database=Verbs;User Id=sa;Password=YOUR_CONTAINER_SA_PASSWORD;TrustServerCertificate=True;
+
